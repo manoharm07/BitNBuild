@@ -28,7 +28,7 @@ import com.example.wisewear.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun userProfile() {
-    // State variables to store user inputs
+
     var name by remember { mutableStateOf("") }
     var age by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
@@ -38,7 +38,7 @@ fun userProfile() {
     val genderOptions = listOf("Male", "Female", "Other")
 
 
-    // Column to arrange elements vertically
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -60,12 +60,12 @@ fun userProfile() {
             )
         }
         Spacer(modifier = Modifier.height(20.dp))
-        // Profile Image (placeholder for now)
+
         Box(
             modifier = Modifier.size(128.dp),
-            contentAlignment = Alignment.BottomEnd // Align the icon at the bottom right
+            contentAlignment = Alignment.BottomEnd
         ) {
-            // Profile Image (placeholder for now)
+            // Profile Image
             Image(
                 painter = painterResource(id = R.drawable.ic_launcher_background), // Add a placeholder image in your resources
                 contentDescription = "Profile Image",
@@ -74,7 +74,7 @@ fun userProfile() {
                     .clip(CircleShape)
                     .border(2.dp, MaterialTheme.colorScheme.primary, CircleShape)
             )
-            // Icon to add an image (overlay)
+            // Icon to add an image
             Icon(
                 painter = painterResource(R.drawable.ic_launcher_foreground), // Use an appropriate resource for the add image icon
                 contentDescription = "Add Image",
@@ -91,7 +91,6 @@ fun userProfile() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Name Input
         OutlinedTextField(
             value = name,
             onValueChange = { name = it },
@@ -105,7 +104,7 @@ fun userProfile() {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Age Input
+
         OutlinedTextField(
             value = age,
             onValueChange = { age = it },
@@ -120,7 +119,7 @@ fun userProfile() {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Gmail Input
+
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
@@ -135,8 +134,8 @@ fun userProfile() {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Gender Input
-        Box { // Wrapping the DropdownMenu inside a Box
+
+        Box {
             OutlinedTextField(
                 value = gender,
                 onValueChange = { gender = it }, // No need to handle text change

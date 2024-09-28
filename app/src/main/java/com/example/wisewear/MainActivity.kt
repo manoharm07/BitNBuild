@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.wisewear.ui.theme.Clothing.AddClothingItem
 import com.example.wisewear.ui.theme.UserInfo.userProfile
 import com.example.wisewear.ui.theme.WisewearTheme
 
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    userProfile()
+                    AddClothingItem()
                 }
             }
         }
