@@ -155,7 +155,7 @@ fun userProfile() {
     }
 }
 
-@Preview
+@Preview(showSystemUi = true)
 @Composable
 fun User() {
     userProfile()
